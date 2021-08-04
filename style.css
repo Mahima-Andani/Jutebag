@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    background-image: linear-gradient(hsla(0, 0%, 97%, .9), #9B8055);
+    /* background: url(/images/gradient-1.png); */
+}
+/* Head of body*/
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 5vw;
+    padding-top: 20px;
+}
+.icons{
+    display: flex;
+    gap: 20px;
+}
+.bar{
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color:#9B8055;
+    border: 2px solid;
+    border-color: hsla(0, 0%, 97%, .9);
+    border-radius: 10px;
+}
+/* Navigation */
+.menu{
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255,255,255,.9);
+    border: 1px solid #9B8055;
+    position: fixed;
+    z-index: 999;
+    width: 90vw;
+    margin-top: 35px;
+}
+.menu li{
+    list-style: none;
+    padding: 15px;
+    text-align: center;
+}
+.menu li a{
+    text-decoration: none;
+
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    color: #9B8055;
+}
+.menu li a:hover{
+    border-bottom: 2px solid #9B8055;
+}
+
+/* Main body content */
+.center{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 7vh;
+        
+    top: 30vh;
+    width: 100vw;
+    animation: fadeIn 2s;
+}
+.caption{
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    padding: 0 25px;
+}
+/* This area is for animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* for desktop site */
+@media only screen and (min-width: 768px) {
+    .bar {
+        display: none;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: initial;
+        border: initial;
+        margin-top: 0;
+        gap: 20px;
+        position: absolute;
+    }
+    .menu li{
+        padding: 0;
+    }
+}
