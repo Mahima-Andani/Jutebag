@@ -5,46 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Charis Clone</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#">
-                <img src="/images/logo.png" alt="logo">
-            </a>
-            <ul class="menu">
-                <li><a href="#">Jute Bags</a></li>
-                <li><a href="#">Gifts</a></li>
-                <li><a href="#">About us</a></li>
-            </ul>
-            <div class="icons">
+    <section>
+        <div class="bg"></div>
+        <header>
+            <nav>
                 <a href="#">
-                    <img src="/images/Vector-1.png" alt="contact">
+                    <img src="/images/logo.png" alt="logo">
                 </a>
-                <a href="#">
-                    <img src="/images/Vector-2.png" alt="user">
-                </a>
-                <a href="#">
-                    <img src="/images/Vector-3.png" alt="shop">
-                </a>
-                <a href="javascript:void(0)" class="bar">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </a>
+                <ul class="menu">
+                    <li><a href="#">Jute Bags</a></li>
+                    <li><a href="#">Gifts</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#">
+                        <img src="/images/Vector-1.png" alt="contact">
+                    </a>
+                    <a href="#">
+                        <img src="/images/Vector-2.png" alt="user">
+                    </a>
+                    <a href="#">
+                        <img src="/images/Vector-3.png" alt="shop">
+                    </a>
+                    <a href="javascript:void(0)" class="bar">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </a>
+                </div>
+            </nav>
+            <div class="center">
+                <h3 class="caption">
+                    A jute bag can save something?
+                </h3>
+                <img src="/images/png/Shopping_Jute_bag.png" alt="jute bag picture">
+                <h3 class="caption caption1">
+                    Buy a jute bag and avoid plastic
+                </h3>
             </div>
-        </nav>
-        <div class="center">
-            <h3 class="caption">
-                A jute bag can save something?
-            </h3>
-            <img src="/images/bag.png" alt="jute bag picture">
-            <h3 class="caption">
-                Buy a jute bag and avoid plastic
-            </h3>
-        </div>
-    </header>
+            <ul class="thumb">
+                <li data-text="Be Happy carry bag">
+                    <img 
+                    src="/images/png/Be_Happy_carry_bag.png"
+                    onclick="imgSlider('/images/png/Be_Happy_carry_bag.png')"
+                    >
+                </li>
+                <li data-text="Gents hand carry bag">
+                    <img src="/images/png/Gents_hand_bag.png"
+                    onclick="imgSlider('/images/png/Gents_hand_bag.png')"
+                    >
+                </li>
+                <li data-text="Gift Giveaway Bag">
+                    <img src="/images/png/Gift _Giveaway_Bag.png"
+                    onclick="imgSlider('/images/png/Gift _Giveaway_Bag.png')"
+                    >
+                </li>
+                <li data-text="Jute file">
+                    <img src="/images/png/Jute_file.png"
+                    onclick="imgSlider('/images/png/Jute_file.png')"
+                    >
+                </li>
+                <li data-text="Jute Hand bag">
+                    <img src="/images/png/Jute_Hand_bag.png"
+                    onclick="imgSlider('/images/png/Jute_Hand_bag.png')"
+                    >
+                </li>
+                <li data-text="Jute School bag">
+                    <img src="/images/png/Jute_School_bag.png"
+                    onclick="imgSlider('/images/png/Jute_School_bag.png')"
+                    >
+                </li>
+                <li data-text="Jute Small Travel bag">
+                    <img src="/images/png/Jute_Small_Travel_bag.png"
+                    onclick="imgSlider('/images/png/Jute_Small_Travel_bag.png')"
+                    >
+                </li>
+                <li data-text="Shopping Jute bag">
+                    <img src="/images/png/Shopping_Jute_bag.png"
+                    onclick="imgSlider('/images/png/Shopping_Jute_bag.png')"
+                    >
+                </li>
+                <li data-text="Women Style">
+                    <img src="/images/png/Women___Style.png"
+                    onclick="imgSlider('/images/png/Women___Style.png')"
+                    >
+                </li>
+            </ul>
+        </header>
+    </section>
     <script>
         const a = document.querySelector('.bar');
         const b = document.querySelector('.menu');
@@ -58,5 +109,24 @@
             }
         });
     </script>
+    <script>
+        function imgSlider(anything){
+            document.querySelector('.center img').src = anything;
+            document.querySelector('.caption').style.display = "none";
+            document.querySelector('.caption1').style.display = "none";
+        }
+
+            let el = document.querySelectorAll('.thumb li');
+        for (let i = 0; i < el.length; i++){
+            el[i].onclick = function(){
+                var c = 0;
+                while(c < el.length){
+                    el[c++].className = 'check';
+                }
+                el[i].className = 'check active';
+            }
+        }
+    </script>
+
 </body>
 </html>
