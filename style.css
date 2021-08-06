@@ -7,15 +7,30 @@
 section{
     position: relative;
 }
-.bg{
+/* .bg{
     position: absolute;
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #9B8055;
+} */
+/* .bg::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: ;
+} */
 header{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #ffffff;
-    background-image: linear-gradient(hsla(0, 0%, 97%, .9), #9B8055);
+    background: linear-gradient(hsla(0, 0%, 97%, .9), #9B8055);
+    transition: 0.5s;
+    /* background-image:  */
     /* background: url(/images/gradient-1.png); */
 }
 header::before{
@@ -90,6 +105,7 @@ nav{
 }
 .center img{
     width: 200px;
+    transition: 0.5s;
 }
 .caption{
     font-family: Roboto;
