@@ -9,7 +9,6 @@
 </head>
 <body>
     <section>
-        <div class="bg"></div>
         <header>
             <nav>
                 <a href="#">
@@ -37,6 +36,10 @@
                     </a>
                 </div>
             </nav>
+            <div class="sample_content">
+                <h1>standard dummy text</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
             <div class="center">
                 <h3 class="caption">
                     A jute bag can save something?
@@ -114,8 +117,12 @@
     <script>
         function imgSlider(anything){
             document.querySelector('.center img').src = anything;
+            document.querySelector('.center img').style.width = "35vw";
+            document.querySelector('.center img').className = "foo";
             document.querySelector('.caption').style.display = "none";
             document.querySelector('.caption1').style.display = "none";
+            document.querySelector('.sample_content').style.display = "block";
+            document.querySelector('.center').style.top = "15vh";
         }
 
         function changeBgColor(color){
